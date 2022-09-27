@@ -44,7 +44,7 @@ const ContactList = ({ contactSelector, selectedContact }) => {
 
   return (
     <div
-      className={`w-full lg:w-[50%] p-6 rounded-l-xl overflow-y-scroll ${hidden}`}
+      className={`w-full lg:w-[50%] p-6 rounded-l-xl overflow-y-scroll ${hidden} lg:border-r-[#EEEEEE] lg:border-r-2`}
     >
       <h2 className="text-center">Contacts</h2>
       <div className="">{contactsList}</div>
