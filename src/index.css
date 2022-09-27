@@ -1,13 +1,55 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "GeneralSans";
+  src: url("../fonts/GeneralSans-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "GeneralSans";
+  src: url("../fonts/GeneralSans-Medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeneralSans";
+  src: url("../fonts/GeneralSans-Semibold.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@layer base {
+  html {
+    @apply font-general;
+    font-weight: 400;
+    scroll-behavior: smooth;
+  }
+
+  h2 {
+    @apply font-medium;
+    @apply text-[20px];
+  }
+
+  h3 {
+    @apply font-semibold;
+  }
+
+  .caption {
+    @apply text-[13px] text-[#777777];
+  }
+
+  p {
+    @apply font-medium;
+  }
+}
+
+@layer components {
+  .info-field {
+    @apply bg-[#F3F3F3] py-2 px-4 rounded-lg;
+  }
 }
